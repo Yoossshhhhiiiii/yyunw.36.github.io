@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#9b6840">
+  <meta name="description" content="把富士山的三段記憶，攤成桌上的明信片。">
+  <title>富士山・三張明信片</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="scene">
+    <div class="scene-tint" aria-hidden="true"></div>
+    <header class="masthead">
+      <p class="eyebrow"><span class="eyebrow-line"></span> A JOURNEY ABOVE THE CLOUDS <span class="eyebrow-line"></span></p>
+      <h1>把風景，寄給自己。</h1>
+      <p class="intro">富士山・三張明信片 <span class="intro-dot">✦</span> 2024.09.08 — 09.09</p>
+    </header>
+
+    <section class="postcard-area" aria-label="富士山明信片收藏">
+      <div class="fan" id="fan" aria-live="polite"></div>
+      <p class="instruction"><span class="instruction-spark">✧</span> 點選明信片，讓故事與音樂一起開始 <span class="instruction-spark">✧</span></p>
+    </section>
+
+    <footer class="scene-footer">
+      <span>FUJI · JAPAN</span>
+      <span>三段旅程，三個片刻</span>
+      <span>37° N · 138° E</span>
+    </footer>
+  </main>
+
+  <dialog class="story-window" id="story-window" aria-labelledby="story-title">
+    <div class="window-bar">
+      <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+      <span>來自富士山的文字</span>
+      <button class="close-button" type="button" id="close-window" aria-label="關閉視窗">✕</button>
+    </div>
+    <div class="window-body">
+      <div class="window-visual"><img id="story-image" alt=""><span class="visual-caption" id="visual-caption"></span></div>
+      <article class="window-story">
+        <div class="story-topline"><span id="story-number"></span><span id="story-date"></span></div>
+        <h2 id="story-title"></h2>
+        <p class="story-subtitle" id="story-subtitle"></p>
+        <div class="story-rule" aria-hidden="true"><span>✦</span></div>
+        <div class="story-copy" id="story-copy"></div>
+        <p class="story-credit">原文 · <span id="story-credit"></span></p>
+      </article>
+    </div>
+    <div class="window-bottom"><button type="button" id="previous-story">← 上一張</button><span id="story-progress"></span><div class="window-actions"><button type="button" class="audio-toggle" id="audio-toggle" aria-label="播放音樂" aria-pressed="false">♫ 播放音樂</button><button type="button" id="next-story">下一張 →</button></div></div>
+  </dialog>
+
+  <audio id="postcard-audio" src="assets/postcard-song.mp3" preload="none" loop></audio>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
